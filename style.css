@@ -1,0 +1,151 @@
+/* font-family: 'Press Start 2P', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Defult Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --white-color: #fff;
+    --dark-color: #272727;
+    --black-color: #000;
+}
+body,button,input {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--white-color);
+}
+button {
+    cursor: pointer;
+}
+body {
+    height: 100vh;
+    background: var(--dark-color);
+}
+button.again__btn {
+    padding: .7rem 1rem;
+    color: var(--dark-color);
+    font-size: 1.2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+.top__heading {
+    text-align: center;
+    padding: 3rem 0rem;
+}
+
+.secreate__number {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+}
+
+.main__part {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6rem;
+}
+span.what__number {
+    font-size: 3rem;
+    z-index: 99;
+    background: var(--white-color);
+    color: var(--dark-color);
+    width: 100px;
+    padding: 1rem 0rem;
+    transition: transform .1s cubic-bezier(0.77,-0.61, 0.8, 2.28);
+}
+.secreate__number::after {
+    content: '';
+    background: var(--white-color);
+    height: 4px;
+    width: 100%;
+    position: absolute;
+}
+input.guess {
+    background: none;
+    border: 2px solid var(--white-color);
+    width: 180px;
+    height: 70px;
+    font-size: 2rem;
+    text-align: center;
+    outline: none;
+    padding: .3rem 1rem;
+}
+.check__btn {
+    text-align: center;
+    padding: 2rem 0rem;
+}
+
+button.check {
+    padding: .7rem 1rem;
+    color: var(--dark-color);
+    font-size: 1.2rem;
+}
+.main__score {
+    margin-top: 3rem;
+}
+
+.score {
+    margin: 1rem 0rem;
+}
+.check__guess {
+    width: 30%;
+}
+
+.input__number {
+    text-align: center;
+}
+
+.instraction {
+    width: 35%;
+}
+footer {
+    height: 15vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-size: .8rem;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 455px){
+    .main__part {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+    }
+    .check__guess {
+        width: 100%;
+    }
+    .instraction {
+        width: 100%;
+        text-align: center;
+    }
+    .main__score {
+        margin-top: 0;
+    }
+    .between {
+        font-size: 13px;
+    }
+    button.again__btn {
+        padding: .6rem .9rem;
+        font-size: 1rem;
+    }
+    .top__heading {
+        padding: 2.5rem 0rem;
+        font-size: .8rem;
+    }
+    footer {
+        height: 28vh;
+    }
+}
